@@ -60,6 +60,10 @@ app.use((req, res, next) => {
 });
 
 // Menjalankan server
-app.listen(PORT, () => {
-  console.log(`Server berjalan di http://localhost:${PORT}`);
+// app.listen(PORT, () => {
+//   console.log(`Server berjalan di http://localhost:${PORT}`);
+// });
+
+app.listen(3001, "0.0.0.0", () => {
+  console.log("Server berjalan di http://0.0.0.0:3001");
 });
