@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+body {
+  font-family: "Quicksand", sans-serif;
+  /* styling lainnya */
+}
+
+/* style.css atau <style> di HTML */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030; /* pastikan di atas konten lain */
+  transition: top 0.3s ease-in-out;
+}
+
+.navbar-nav ::hover {
+  text-transform: bold;
+}
+
+.bg-custom-navbar {
+  background-color: #075b5e !important;
+}
+
+/* untuk css maps */
+.map {
+  height: 500px;
+  width: 100%;
+}
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
