@@ -98,7 +98,7 @@
         <div
           id="carouselExampleIndicators"
           class="carousel slide"
-          data-bs-ride="carousel"
+          data-bs-ride="false"
         >
           <!-- Indicators -->
           <div class="carousel-indicators">
@@ -134,7 +134,7 @@
             <!-- Video -->
             <% if (item.video) { %>
             <div class="carousel-item">
-              <video class="d-block w-100" controls playsinline>
+              <video class="d-block w-100" controls>
                 <source
                   src="https://admin1.gendangbeleqlombok.cloud/peralatan/<%= item.video.replace(/^(\/)?peralatan\//, '') %>"
                   type="video/mp4"
@@ -191,6 +191,18 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       defer
     ></script>
+
+    <script>
+      const carousel = document.getElementById("carouselExampleIndicators");
+      const videos = carousel.querySelectorAll("video");
+
+      carousel.addEventListener("slide.bs.carousel", () => {
+        videos.forEach((video) => {
+          video.pause();
+          video.currentTime = 0;
+        });
+      });
+    </script>
 
     <!-- <script>
       const carousel = document.getElementById("carouselExampleIndicators");
