@@ -75,7 +75,7 @@
       class="navbar navbar-expand-lg navbar-light bg-custom-navbar shadow-sm"
     >
       <div class="container">
-        <a class="navbar-brand fw-bold text-light" href="/">Gendang Beleq</a>
+        <a class="navbar-brand fw-bold text-light" href="/">GENDANG LOMBOK</a>
         <div class="ms-auto">
           <a href="/alatMusik" class="btn btn-outline-primary">← Kembali</a>
         </div>
@@ -134,7 +134,7 @@
             <!-- Video -->
             <% if (item.video) { %>
             <div class="carousel-item">
-              <video class="d-block w-100" autoplay controls playsinline>
+              <video class="d-block w-100" controls playsinline>
                 <source
                   src="https://admin1.gendangbeleqlombok.cloud/peralatan/<%= item.video.replace(/^(\/)?peralatan\//, '') %>"
                   type="video/mp4"
@@ -192,7 +192,7 @@
       defer
     ></script>
 
-    <script>
+    <!-- <script>
       const carousel = document.getElementById("carouselExampleIndicators");
       const videos = carousel.querySelectorAll("video");
 
@@ -212,6 +212,6 @@
           video.play();
         }
       });
-    </script>
+    </script> -->
   </body>
 </html>
