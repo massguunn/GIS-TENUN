@@ -72,6 +72,16 @@
         text-align: center;
         margin-bottom: 20px;
       }
+
+      @media (max-width: 767px) {
+        .media-icon i {
+          font-size: 1.5rem !important; /* lebih kecil */
+        }
+
+        .media-icon span {
+          font-size: 0.9rem;
+        }
+      }
     </style>
 
     <!-- Custom CSS -->
@@ -184,47 +194,47 @@
           >
             <div class="row text-white">
               <!-- WhatsApp -->
-              <div class="col">
+              <div class="col-12 col-md media-icon mb-3 mb-md-0">
                 <a
                   href="https://wa.me/<%= item.nomer_hp %>?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20Gendang%20Beleq%20anda"
                   target="_blank"
                   class="text-white text-decoration-none"
                 >
                   <i
-                    class="fa-brands fa-square-whatsapp fa-beat fa-2xl"
+                    class="fa-brands fa-square-whatsapp fa-beat"
                     style="color: #63e6be"
                   ></i>
-                  WHATSAPP
+                  <span>WHATSAPP</span>
                 </a>
               </div>
 
               <!-- Facebook -->
-              <div class="col">
+              <div class="col-12 col-md media-icon mb-3 mb-md-0">
                 <a
                   href="<%= item.link_fb %>"
                   target="_blank"
                   class="text-white text-decoration-none"
                 >
                   <i
-                    class="fa-brands fa-square-facebook fa-beat fa-2xl"
+                    class="fa-brands fa-square-facebook fa-beat"
                     style="color: #74c0fc"
                   ></i>
-                  FACEBOOK
+                  <span>FACEBOOK</span>
                 </a>
               </div>
 
               <!-- Instagram -->
-              <div class="col">
+              <div class="col-12 col-md media-icon">
                 <a
                   href="<%= item.link_ig %>"
                   target="_blank"
                   class="text-white text-decoration-none"
                 >
                   <i
-                    class="fa-brands fa-square-instagram fa-beat fa-2xl"
+                    class="fa-brands fa-square-instagram fa-beat"
                     style="color: #e1306c"
                   ></i>
-                  INSTAGRAM
+                  <span>INSTAGRAM</span>
                 </a>
               </div>
             </div>
