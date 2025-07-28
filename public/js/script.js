@@ -1,4 +1,4 @@
-// Navbar hide on scroll (opsional)
+// Navbar hide on scroll
 let lastScrollTop = 0;
 const navbar = document.querySelector(".navbar");
 
@@ -10,32 +10,31 @@ window.addEventListener("scroll", function () {
 
 // PWA Install Prompt
 let deferredPrompt;
-
 window.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
   deferredPrompt = e;
 
-  const installBtn = document.getElementById("installPWA");
+  const installBtn = document.getElementById("installBtn");
   if (installBtn) {
     installBtn.style.display = "inline-block";
 
-    installBtn.addEventListener("click", () => {
+    installBtn.addEventListener("click", async () => {
       installBtn.style.display = "none";
       deferredPrompt.prompt();
 
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === "accepted") {
-          console.log("Aplikasi diinstal");
-        } else {
-          console.log("Instalasi dibatalkan");
-        }
-        deferredPrompt = null;
-      });
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === "accepted") {
+        console.log("Aplikasi diinstal");
+      } else {
+        console.log("Instalasi dibatalkan");
+      }
+
+      deferredPrompt = null;
     });
   }
 });
 
-// Register service worker
+// Register Service Worker
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register("/service-worker.js")
