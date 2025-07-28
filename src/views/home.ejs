@@ -157,8 +157,38 @@
       <p class="mb-0 fw-semibold">&copy; 2025 Gendang Beleq Lombok</p>
     </footer>
 
-    <!-- //untuk install pwa -->
-    <button id="installBtn" style="display: none">Install Aplikasi</button>
+    <!-- Toast Install PWA -->
+    <div
+      class="toast-container position-fixed bottom-0 end-0 p-3"
+      style="z-index: 9999"
+    >
+      <div
+        id="pwaToast"
+        class="toast align-items-center text-bg-dark border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body">
+            Tambahkan aplikasi ini ke layar utama Anda untuk pengalaman terbaik.
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary btn-sm me-2"
+            id="installToastBtn"
+          >
+            Install
+          </button>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
 
     <!-- Script JS -->
     <script src="/js/script.js"></script>

@@ -8,30 +8,32 @@ window.addEventListener("scroll", function () {
   lastScrollTop = Math.max(0, scrollTop);
 });
 
-// PWA Install Prompt
 let deferredPrompt;
+
 window.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
   deferredPrompt = e;
 
-  const installBtn = document.getElementById("installBtn");
-  if (installBtn) {
-    installBtn.style.display = "inline-block";
+  // Tampilkan toast install
+  const toastEl = document.getElementById("pwaToast");
+  const toast = new bootstrap.Toast(toastEl);
+  toast.show();
 
-    installBtn.addEventListener("click", async () => {
-      installBtn.style.display = "none";
-      deferredPrompt.prompt();
+  // Tangani tombol install
+  const installBtn = document.getElementById("installToastBtn");
+  installBtn.addEventListener("click", async () => {
+    toast.hide();
+    deferredPrompt.prompt();
 
-      const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === "accepted") {
-        console.log("Aplikasi diinstal");
-      } else {
-        console.log("Instalasi dibatalkan");
-      }
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === "accepted") {
+      console.log("Aplikasi diinstal");
+    } else {
+      console.log("User menolak install");
+    }
 
-      deferredPrompt = null;
-    });
-  }
+    deferredPrompt = null;
+  });
 });
 
 // Register Service Worker
