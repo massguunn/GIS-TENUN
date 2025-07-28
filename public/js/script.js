@@ -14,16 +14,27 @@ window.addEventListener("scroll", function () {
 
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Untuk Mobile atau scroll ke atas paling atas
 });
+let deferredPrompt;
 
-window.addEventListener("load", () => {
-  // Cek apakah user sudah pernah melihat alert sebelumnya
-  if (!localStorage.getItem("pwa_alert_shown")) {
-    setTimeout(() => {
-      alert(
-        "📲 Untuk pengalaman terbaik, tambahkan aplikasi ini ke layar utama Anda."
-      );
-      // Simpan status supaya tidak muncul terus
-      localStorage.setItem("pwa_alert_shown", "yes");
-    }, 1000);
-  }
+window.addEventListener("beforeinstallprompt", (e) => {
+  // Cegah prompt otomatis
+  e.preventDefault();
+  deferredPrompt = e;
+
+  // Tampilkan tombol install
+  const installBtn = document.getElementById("installPWA");
+  if (installBtn) installBtn.style.display = "inline-block";
+
+  installBtn.addEventListener("click", () => {
+    installBtn.style.display = "none";
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === "accepted") {
+        console.log("User accepted install");
+      } else {
+        console.log("User dismissed install");
+      }
+      deferredPrompt = null;
+    });
+  });
 });
