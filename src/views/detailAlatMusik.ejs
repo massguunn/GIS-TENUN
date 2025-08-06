@@ -86,14 +86,6 @@
     <div class="container mt-5 pt-5">
       <div class="detail-box">
         <h2 class="fw-bold mb-4 text-center"><%= item.nama %></h2>
-        <!-- <div class="image-wrapper">
-          <img
-            src="http://localhost:3000/peralatan/<%= item.gambar.replace(/^(\/)?peralatan\//, '') %>"
-            alt="<%= item.nama %>"
-            class="custom-image"
-            onerror="this.src='https://placehold.co/600x400?text=No+Image'"
-          />
-        </div> -->
 
         <div
           id="carouselExampleIndicators"
@@ -203,27 +195,5 @@
         });
       });
     </script>
-
-    <!-- <script>
-      const carousel = document.getElementById("carouselExampleIndicators");
-      const videos = carousel.querySelectorAll("video");
-
-      carousel.addEventListener("slide.bs.carousel", () => {
-        // Pause semua video saat ganti slide
-        videos.forEach((video) => {
-          video.pause();
-          video.currentTime = 0;
-        });
-      });
-
-      carousel.addEventListener("slid.bs.carousel", () => {
-        // Mainkan video jika ada di slide aktif
-        const activeItem = carousel.querySelector(".carousel-item.active");
-        const video = activeItem.querySelector("video");
-        if (video) {
-          video.play();
-        }
-      });
-    </script> -->
   </body>
 </html>
