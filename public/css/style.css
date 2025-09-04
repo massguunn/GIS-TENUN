@@ -1,37 +1,97 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 body {
-  font-family: "Quicksand", sans-serif;
-  /* styling lainnya */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fc;
+  color: #333;
 }
 
-/* style.css atau <style> di HTML */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1030; /* pastikan di atas konten lain */
-  transition: top 0.3s ease-in-out;
-}
-
-.navbar-nav ::hover {
-  text-transform: bold;
-}
-
-.bg-custom-navbar {
-  background-color: #075b5e !important;
-}
-
-/* untuk css maps */
-.map {
-  height: 500px;
-  width: 100%;
-}
 .card img {
   height: 200px;
   object-fit: cover;
 }
 
-.text-justify {
-  text-align: justify;
+/* === Navbar Utama === */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  transition: top 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #ffffff !important;
+}
+
+/* Warna background navbar */
+.bg-custom-navbar {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* Brand Logo */
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #d3dad9 !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+/* Nav Link Umum */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #d3dad9 !important;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Animasi garis bawah hanya untuk hover, bukan active */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d3dad9;
+  transition: width 0.3s ease;
+}
+
+/* Hover animasi garis bawah */
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hover ubah warna teks */
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Link aktif TANPA garis bawah */
+.navbar-nav .nav-link.active {
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+/* Pastikan garis bawah hilang pada link aktif */
+.navbar-nav .nav-link.active::after {
+  width: 0 !important;
+}
+
+/* Hover tetap aktif di mobile */
+@media (max-width: 767.98px) {
+  #navbarNav.show .nav-link::after {
+    bottom: 4px;
+  }
+  #navbarNav.show .nav-link:hover::after {
+    width: 100%;
+  }
+}
+
+/* Navbar toggler */
+.navbar-toggler {
+  border: none;
+  outline: none;
 }

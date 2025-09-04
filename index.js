@@ -52,7 +52,7 @@ app.get("/", (req, res) => {
 
 app.use("/gis", appRoutes);
 app.use("/", appRoutes);
-app.use("/alatMusik", appRoutes); // tambahkan ini agar route /detail/:id aktif secara global
+app.use("/motif", appRoutes); // tambahkan ini agar route /detail/:id aktif secara global
 
 app.use((req, res, next) => {
   res.locals.url = req.protocol + "://" + req.get("host");
@@ -60,10 +60,10 @@ app.use((req, res, next) => {
 });
 
 // Menjalankan server
-// app.listen(PORT, () => {
-//   console.log(`Server berjalan di http://localhost:${PORT}`);
-// });
-
-app.listen(3001, "0.0.0.0", () => {
-  console.log("Server berjalan di http://0.0.0.0:3001");
+app.listen(PORT, () => {
+  console.log(`Server berjalan di http://localhost:${PORT}`);
 });
+
+// app.listen(3001, "0.0.0.0", () => {
+//   console.log("Server berjalan di http://0.0.0.0:3001");
+// });

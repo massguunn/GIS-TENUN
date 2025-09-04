@@ -1,0 +1,11 @@
+.text-justify {
+  text-align: justify;
+}
+.alat-tenun img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}

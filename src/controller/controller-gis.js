@@ -6,7 +6,7 @@ pool.on("error", (err) => console.error(err));
 
 module.exports = {
   gis(req, res) {
-    pool.query("SELECT * FROM data_GB", (err, results) => {
+    pool.query("SELECT * FROM tabel_pengerajin", (err, results) => {
       if (err) {
         console.error("Gagal mengambil data:", err);
         return res.status(500).send("Gagal mengambil data dari database");
