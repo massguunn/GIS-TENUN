@@ -12,15 +12,28 @@
       rel="stylesheet"
     />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
     <link rel="stylesheet" href="/css/home.css" />
   </head>
 
   <body class="bg-white text-dark">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-custom-navbar">
+    <nav class="navbar navbar-expand-md navbar-dark bg-custom-navbar fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">TENUN LOMBOK TIMUR</a>
+        <a class="navbar-brand fw-bold" href="/">TENUN LOMBOK TIMUR</a>
+
+        <!-- Tombol Hamburger -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div
           class="collapse navbar-collapse justify-content-end"
@@ -28,7 +41,7 @@
         >
           <ul class="navbar-nav align-items-center">
             <li class="nav-item">
-              <a class="nav-link text-white active" href="#">HOME</a>
+              <a class="nav-link text-white active" href="/">HOME</a>
             </li>
             <li class="nav-item">
               <a href="/gis" class="nav-link text-white">LOKASI</a>

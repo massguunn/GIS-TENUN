@@ -13,48 +13,27 @@
     />
 
     <!-- link css custom -->
-    <link rel="stylesheet" href="/css/style.css" />
-
-    <!-- Custom CSS -->
-    <style>
-      /* Card Motif */
-      .card-motif {
-        transition: all 0.3s ease-in-out;
-        border: none;
-        border-radius: 15px;
-        overflow: hidden;
-      }
-
-      .card-motif:hover {
-        transform: translateY(-6px);
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-      }
-
-      .card-motif img {
-        height: 220px;
-        object-fit: cover;
-      }
-
-      /* Tombol */
-      .btn-custom {
-        background: linear-gradient(135deg, #6a11cb, #2575fc);
-        color: #fff;
-        border: none;
-        transition: 0.3s;
-      }
-
-      .btn-custom:hover {
-        background: linear-gradient(135deg, #2575fc, #6a11cb);
-        color: #fff;
-        transform: scale(1.05);
-      }
-    </style>
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/motif.css" />
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-custom-navbar">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">TENUN LOMBOK TIMUR</a>
+        <a class="navbar-brand fw-bold" href="/">TENUN LOMBOK TIMUR</a>
+
+        <!-- Tombol Hamburger -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div
           class="collapse navbar-collapse justify-content-end"

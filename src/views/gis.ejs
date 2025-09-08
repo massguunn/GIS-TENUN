@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <title>Tenun Lombok Timur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0d0072" />
-    <link rel="manifest" href="/web.webmanifest" />
-    <script src="/js/register.js"></script>
     <link rel="icon" href="/img/pavicon.png" />
 
     <!-- Bootstrap -->
@@ -22,16 +19,27 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
     <link rel="stylesheet" href="/css/gis.css" />
-
-    <style></style>
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-custom-navbar">
+    <nav class="navbar navbar-expand-md navbar-dark bg-custom-navbar fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">TENUN LOMBOK TIMUR</a>
+        <a class="navbar-brand fw-bold" href="/">TENUN LOMBOK TIMUR</a>
+
+        <!-- Tombol Hamburger -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div
           class="collapse navbar-collapse justify-content-end"
