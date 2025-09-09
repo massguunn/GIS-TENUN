@@ -1,16 +1,16 @@
-// module.exports = {
-//   multipleStatements: true,
-//   host: "localhost",
-//   user: "gb_db",
-//   password: "Tb8ydMMcBiArszcr",
-//   database: "gb_db",
-// };
-
-// UNTUK LOCAL
 module.exports = {
   multipleStatements: true,
   host: "localhost",
-  user: "root",
-  password: "",
-  database: "KERAJINAN-TENUN-DB",
+  user: "db-tenun",
+  password: "tB7nFhBBh2dKsrf5",
+  database: "DB-TENUN",
 };
+
+// UNTUK LOCAL
+// module.exports = {
+//   multipleStatements: true,
+//   host: "localhost",
+//   user: "root",
+//   password: "",
+//   database: "KERAJINAN-TENUN-DB",
+// };
